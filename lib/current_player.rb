@@ -1,6 +1,6 @@
 def turn_count(board)
   players = ["X", "O"]
-  count = 1
+  count = 0
   players.each do |player|
     if player == "X" || player == "O"
       count += 1
@@ -10,5 +10,9 @@ end
 end
 
 def current_player(board)
-turn_count(board) % 2 == 0 ? "X" : "O"
+  if turn_count(board) % 2 == 0
+     "X"
+  else
+     "O"
+  end
 end
